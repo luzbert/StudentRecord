@@ -1,0 +1,35 @@
+import java.util.Scanner; 
+public class StudentRecord {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String[] StudentNo = new String[5];
+        String[] StudentName = new String[5];
+        String[] StudentCourse = new String[5];
+  
+        System.out.println("===================");
+        System.out.println("Student Record");
+        System.out.println("====================");
+          
+        for(int j = 0; j < StudentNo.length; j++) {
+            System.out.println("Student" + (j + 1));
+            System.out.println("Enter StudentNo.:");
+            StudentNo[j] = input.next();
+          
+            System.out.println("Enter StudentName:");
+            StudentName[j] = input.next();
+          
+            System.out.println("Enter the Course: ");
+            StudentCourse[j] = input.next();
+        }
+          
+        System.out.println("==============================================");
+        System.out.println("Student Record");
+        System.out.println("==============================================");
+        System.out.println("StudentNo    StudentName    StudentCourse");
+        System.out.println("===============================================");
+          
+        for(int j = 0; j < StudentNo.length; j++) {
+            System.out.printf("%-20s%-20s%-20s%n", StudentNo[j], StudentName[j], StudentCourse[j]);
+        }
+    }
+}
